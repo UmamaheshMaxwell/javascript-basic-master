@@ -1,5 +1,10 @@
-function getFullName(firstName, lastName){
-    this.firstName = firstName
-    this.lastName = lastName;
+ a=10;
+
+
+function sample(){
+     var a =20;
 }
 
+sample()
+
+console.log(a)

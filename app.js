@@ -1,9 +1,5 @@
-
-function greet(name){
-    console.log(name);
-    console.log("hello " + name)
-}
-
-greet("uma")
-greet()
-greet(0)
+var output = (function(x){
+                delete x;
+                return x;
+             })(0)
+console.log(output)

@@ -157,3 +157,38 @@ apply - apply method is similar to call. The difference is that
 
 The call, bind, apply methods cn be used to set 'this' keyword 
 independent of how function is called.
+
+Class
+------
+Javascript is a prototype-based language which conatins no class statement 
+such a C# or java
+
+e.g. function Student() {}
+
+instance: 
+---------
+var student1 = new Student();
+var student2 = new Student();
+
+contructor
+-----------
+
+
+prototype
+----------
+It is an object that is associated with every function and object by 
+default in javascript.
+
+This is a special type of object to which additional properties can 
+be attached which can be sshared across all the instances of its 
+constructor function.
+
+Uses
+-------
+1. Access properties and method of an class object
+2. To implement inheritance
+
+== v ===
+---------
+== will only check for value
+=== will check for value and type
