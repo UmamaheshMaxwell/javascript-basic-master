@@ -1,5 +1,8 @@
-var output = (function(x){
-                delete x;
-                return x;
-             })(0)
-console.log(output)
+var z =1;
+var x = y = z;
+console.log(x)
+console.log(y)
+
+var x,y = z
+console.log(x)
+console.log(y)

@@ -192,3 +192,47 @@ Uses
 ---------
 == will only check for value
 === will check for value and type
+
+inheritance
+-----------
+One Object getting access to the properties and methods of another object
+
+in Javascript, inheritance is supported by using prototype object. 
+This is also called prototypal inheritance.
+
+Polymorphism
+------------
+Means function existing in "many forms". This describes the ability for 
+objects to present the same interface for different behaviours
+
+Error Handling
+--------------
+try -catch- finally
+
+try {
+    code that may thorw errors
+}
+
+catch {
+    // code which needs to executed when there is an error
+}
+
+finally {
+    // code to be executed regardless of an error
+}
+
+Singleton Design Pattern
+------------------------
+Limits  the number of instances of a perticular object to just one.
+This single instance is called the singleton.
+
+Singletons are useful in situations where system-wide actions need to be 
+co-ordinated from a single single cental place.
+
+Eg: Database connection Pool 
+
+Module Pattern
+----------------
+Deals with code encapsulation. 
+It is used to create private and public properties.
+
