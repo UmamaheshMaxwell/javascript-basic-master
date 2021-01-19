@@ -187,3 +187,142 @@ var Module = (function(){
 })();
 
 console.log(Module.publicMethod("Hello World"))
+
+/*===============================*/
+
+var z =1;
+var x = y = z;
+console.log(x)
+console.log(y)
+
+var x,y = z
+console.log(x)
+console.log(y)
+
+/*===============================*/
+
+console.clear()
+console.log("Hello")
+
+/*===============================*/
+
+var array = [
+    {index:0, id:1,name: 'Uma', age:38},
+    {index:1,id:2,name: 'Swathi', age:38},
+    {index:2, id:3, name: 'Jagrav', age:7}
+]
+
+console.table(array)
+
+var person1 ={ name: 'johngalt', city: 'boston'}
+
+console.table(person1)
+
+/*===============================*/
+
+console.log("Hello")
+console.warn("Please handle this")
+console.error({message: "There is an error"})
+
+/*===============================*/
+
+console.log("Hello %s, your ID is %i", "uma", 12345)
+
+/*
+  %s - string
+  %i - integer
+  %o - object
+  %f - float
+*/
+
+var obj = {name: 'Johngalt', city: 'Boston'}
+
+console.log("data objects are %o and %o ", 
+            obj, 
+            ["red", "green", "blue"])
+
+/*===============================*/
+
+/*  
+    split()
+    reverse()
+    join()
+ */
+var message= "Hello how are you" // olleh woh era uoy
+console.log(message)
+
+var data = message.split("").reverse().join("")
+                  .split(" ").reverse().join(" ")
+
+console.log(data)
+
+
+/*===============================*/
+// isEven(2) // true
+// isEven(3) // false
+
+function isEven(value){
+    if(value %2 == 0){
+        return true
+    } else {
+        return false
+    }
+}
+
+function isEven(value){
+   return value %2 == 0
+}
+
+console.log(isEven(2))
+console.log(isEven(3))
+
+/*===============================*/
+
+/*
+   getExtension(filname) 
+   resume.doc : doc
+   sample.pdf: pdf
+   data.txt: txt
+   notepad: 'No extension'
+*/
+
+function getExtension(fileName) {
+    var file = fileName.split(".")
+    if(file[1]){
+        return file[1]
+    } else {
+        return 'No Extension'
+    }
+
+}
+function getExtension(fileName) {
+    return fileName.split(".").length > 1 ? fileName.split(".")[1]: 'No Extension'
+}
+
+console.log(getExtension('resume.doc'))
+console.log(getExtension('sample.pdf'))
+console.log(getExtension('data.txt'))
+console.log(getExtension('notepad'))
+
+
+/*===============================*/
+
+// arraySum([1,2,3,4,5]) //15
+// arraySum([1,2,3,4,5,6,7,8,9,10]) //55
+// arraySum([1,2, 3, 'uma', 4, 5]) // 15
+// arraySum([1,2, 3, 'uma', {'a' : 'uma'}, 4, 5]) // 15
+// arraySum([1,2,[[3],4], 5]) // 15
+
+function arraySum(array){
+
+    var total = 0;
+
+    for(var i =0; i<array.length; i++){
+        total += array[i]
+    }
+
+    return total;
+}
+
+console.log(arraySum([1,2,3,4,5]))
+console.log(arraySum([1,2,3,4,5,6,7,8,9,10]))
