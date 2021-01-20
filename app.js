@@ -1,15 +1,28 @@
+/*===============================*/
 
-var div1 = document.getElementById('dvMessage')
-console.log(div1.innerHTML)
+// arraySum([1,2,3,4,5]) //15
+// arraySum([1,2,3,4,5,6,7,8,9,10]) //55
+// arraySum([1,2, 3, 'uma', 4, 5]) // 15
+// arraySum([1,2, 3, 'uma', {'a' : 'uma'}, 4, 5]) // 15
+// arraySum([1,2,[[3],4], 5]) // 15
 
-var div2 = document.getElementsByClassName("container")
-console.log(div2)
+function arraySum(array){
+    var total = 0;
 
-function clickMe(){
-    alert('did you click me ?')
+    for(var i =0; i<array.length; i++){
+        if(typeof array[i] === 'number'){
+            total += array[i]
+        }
+        else if (Array.isArray(array[i]))
+        {
+            total +=arraySum(array[i])
+        }
+    }
+    return total;
 }
 
-function promptMe(){
-    result = prompt("Hello", ' ');
-    console.log(result)
-}
+console.log(arraySum([1,2,3,4,5]))
+console.log(arraySum([1,2,3,4,5,6,7,8,9,10]))
+console.log(arraySum([1,2, 3, 'uma', 4, 5]))
+console.log(arraySum([1,2, 3, 'uma', {'a' : 'uma'}, 4, 5]))
+console.log(arraySum([1,2,[[3],4], 5]))

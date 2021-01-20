@@ -326,3 +326,20 @@ function arraySum(array){
 
 console.log(arraySum([1,2,3,4,5]))
 console.log(arraySum([1,2,3,4,5,6,7,8,9,10]))
+
+/*===============================*/
+
+var div1 = document.getElementById('dvMessage')
+console.log(div1.innerHTML)
+
+var div2 = document.getElementsByClassName("container")
+console.log(div2)
+
+function clickMe(){
+    alert('did you click me ?')
+}
+
+function promptMe(){
+    result = prompt("Hello", ' ');
+    console.log(result)
+}
